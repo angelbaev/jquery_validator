@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>AB-Labs - jQuery Form Validator plugin</title>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.form_validator.plugin.js"></script>
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+        <style type="text/css">
+          .row {
+            padding: 3px 10px 3px 10px;
+          }
+        </style>
+<script type="text/javascript">
+    $(document).ready( function($) {
+    /*
+		$('input[name=\'test_1\'], textarea[name=\'test_3\']').TrackChanges({
+			color		: '#005dff',
+			fontStyle	: 'italic',
+		});
+    */
+    $('input[name=\'validate_button\']').click(function(){
+        $('form[name=\'fValdator\']').form_validator({
+          msg_tag_prefix: '<div class="error_input"><div class="error_icon_mark"></div><span>',
+          msg_tag_suffix: '</span></div>',
+          error_class: 'ierr'
+        });     
+    });
+	});
+</script>        
+    </head>
+    <body>
+             
+      <form name="fValdator" id="fValdator" method="get" action="">
+      
+        <div class="row">
+          <label>User name: </label>
+         <input type="text" name="user" value="" style="width:330px" data-rules="trim|required|escape|username" data-error="'required':'Please enter username.', 'username':'Invalid username.'">
+        </div>
+        <div class="row">
+          <label>URL: </label>
+         <input type="text" name="url" value="" style="width:330px" data-rules="trim|required|escape|valid_url"  data-error="'required':'Please enter URL.', 'url':'Invalid URL.'">
+        </div>
+        <div class="row">
+          <label>E-mail: </label>
+         <input type="text" name="email" value="" style="width:330px" data-rules="trim|required|valid_email"  data-error="'required':'Please enter E-mail.', 'email':'Invalid E-mail.'">
+        </div>
+        <div class="row">
+          <label>Price: </label>
+         <input type="text" name="price" value="" style="width:330px" data-rules="trim|required|numeric"  data-error="'required':'Please enter Price.'">
+        </div>
+        <div class="row">
+          <label>Date: </label>
+         <input type="text" name="date" value="" style="width:330px" data-rules="trim|required|valid_date[dd/mm/yyyy]" data-error="'required':'Please enter date.', 'valid_date':'Invalid date format.'">
+        </div>
+        <div class="row">
+          <label>No validate: </label>
+         <input type="text" name="no_validate" value="" style="width:330px">
+        </div>
+        <div class="row">
+          <label>No validate 2: </label>
+         <input type="text" name="no_validate2" value="" style="width:330px">
+        </div>
+        <div class="row">
+          <input type="submit"  name="validate_button" value="Validate Form">
+        </div>
+
+      </form>
+        
+    </body>
+</html>

@@ -1,0 +1,55 @@
+.ierr {
+  border: 1px solid red !important;
+  
+}
+div[for_input] {
+  font-size: 11px;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  display: inline;
+  width: auto  !important;
+  margin-left: 3px;
+  position: absolute;
+  z-index: 10;
+}
+div[for_input] .error_input {
+   font-size: 11px;
+  color: red;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  position: absolute;
+  display: inline;
+  width: auto  !important;
+  min-width: 200px;
+  margin-left: 3px;
+}
+div[for_input] .error_input .error_icon_mark {
+  background: url("../img/ex-mark-icon.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  width: 16px !important; 
+  height: 16px !important;
+  position: absolute;
+  margin-top: 3px;
+}
+div[for_input] .error_input span {
+  border: 1px solid red;
+  background-color: #fff;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  padding-left: 4px;
+  padding-right: 4px;
+  -webkit-border-radius: 6px; 
+  -moz-border-radius: 6px;
+  border-radius: 6px; 
+  display: none;
+  color: red;
+  margin-left: 20px;
+}
+div[for_input] .error_input .error_icon_mark:hover~span {
+  display: block;
+}
+label {
+  display: block;
+}
+input, select, textarea {
+  border: 1px solid #000;
+}
