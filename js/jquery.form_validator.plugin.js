@@ -1,5 +1,5 @@
 /*!
- * jQuery FormValidator - A Track Changes like MS Word Plugin
+ * jQuery FormValidator - A JQuery Form Validator Plugin
  *
  * The MIT License
  *
